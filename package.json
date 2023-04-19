@@ -13,7 +13,7 @@
   "description": "This is webportal",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js"
   },
   "keywords": [
     "alpha"
