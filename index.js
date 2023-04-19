@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser")
 
 try{
-    mongoose.connect("mongodb+srv://murali:Murali1234567890@cluster0.ev7pbcx.mongodb.net/?retryWrites=true&w=majority");
+    mongoose.connect("mongodb+srv://murali:murali1889@cluster0.ev7pbcx.mongodb.net/?retryWrites=true&w=majority");
     console.log("database Connected");
 }
 catch(err){
