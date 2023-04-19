@@ -22,21 +22,21 @@ const login = async (req, res, next) => {
   if (!user) {
     return res.status(401).json("User doesn't exists");
   }
+  
+  const validPassword = await bcrypt.compare(req.query.password, user.password);
+  console.log(validPassword);
+  if (!validPassword) return res.status(401).json("Incorrect crendentials");
   const token = jwt.sign(
-    { name: req.query.name, email: req.query.email },
+    {email: req.query.email },
     "Muralivvrsn",
     {
       expiresIn: "2h",
     }
   );
-  const validPassword = await bcrypt.compare(req.query.password, user.password);
-  console.log(validPassword);
-  if (!validPassword) return res.status(401).json("Incorrect crendentials");
-  res.cookie("token", token);
   res.json(user)
 };
 const home = (req, res, next) => {
-  res.json(req.cookies.token);
+  res.json("Hello home")
 };
 
 const jobs = async(req,res,next)=>{
