@@ -15,11 +15,14 @@
   "description": "This is webportal",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "keywords": [
     "alpha"
   ],
+  "engines": {
+    "node" : "14.x"
+  },
   "author": "Murali",
   "license": "ISC"
 }
