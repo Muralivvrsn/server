@@ -21,7 +21,7 @@
     "alpha"
   ],
   "engines": {
-    "node" : ">= 14 < 15"
+    "node" : ">= 14.20.1"
   },
   "author": "Murali",
   "license": "ISC"
