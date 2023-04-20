@@ -12,6 +12,7 @@ const register = async (req, res, next) => {
       name: req.body.name,
       email: req.body.email,
       password: hashPassword,
+      verified:1
     });
     user.save();
     res.send(user);
@@ -44,6 +45,9 @@ const jobs = async(req,res,next)=>{
     res.send(data)
   }).catch((err)=>res.send("Something Went Wrong"))
 }
+
+
+
 
 module.exports = {
   register,

@@ -15,9 +15,10 @@ const user = new Schema({
         type:String,
         required:[true,"Password is required"]
     },
-    token:{
-        type:String
-    }
+    verified:{
+        type:Number,
+        default:0
+    },
 });
 
 const User = mongoose.model("Users",user);
